@@ -28,7 +28,7 @@ jobs:
 
       # 4️⃣ Gradle wrapper oluştur (eğer yoksa)
       - name: Generate Gradle wrapper
-        run: gradle wrapper --gradle-version 8.6
+        run: gradle wrapper --gradle-version 8.5
 
       # 5️⃣ Gradle’a çalıştırma izni ver
       - name: Give Gradle permission
