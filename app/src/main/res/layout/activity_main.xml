@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/edtSatisFiyati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Satış Fiyatı (TL)"
+        android:inputType="numberDecimal"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edtKomisyonOrani"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Komisyon Oranı (%)"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnHesapla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HESAPLA"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/txtSonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp" />
+</LinearLayout>
