@@ -9,36 +9,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Kodları al
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2️⃣ JDK ortamını kur
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      # 3️⃣ Android SDK’yı kur
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
         with:
           packages: 'platforms;android-34 build-tools;34.0.0'
 
-      # 4️⃣ Gradle wrapper oluştur (eğer yoksa)
       - name: Generate Gradle wrapper
-        run: gradle wrapper --gradle-version 8.5
+        run: gradle wrapper --gradle-version 8.9
 
-      # 5️⃣ Gradle’a çalıştırma izni ver
       - name: Give Gradle permission
         run: chmod +x ./gradlew
 
-      # 6️⃣ APK’yı derle
       - name: Build debug APK
         run: ./gradlew assembleDebug
 
-      # 7️⃣ Çıktıyı kaydet (indirilebilir hale getir)
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
